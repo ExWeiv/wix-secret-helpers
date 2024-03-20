@@ -1,0 +1,53 @@
+{
+  "name": "@exweiv/wix-secret-helpers",
+  "version": "0.0.1",
+  "description": "Some basic helper functions for secrets in Wix, works with wix-secrets-backend.v2 APIs",
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "types": "./types/global.d.ts",
+  "keywords": [
+    "wix",
+    "velo",
+    "secrets",
+    "wix-secrets-backend",
+    "exweiv",
+    "wix-secret-helpers"
+  ],
+  "author": {
+    "name": "ExWeiv Apps Team",
+    "email": "info@apps.exweiv.com"
+  },
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "url": "git@github.com:ExWeiv/wix-secret-helpers.git",
+    "type": "git"
+  },
+  "homepage": "https://apps.exweiv.com/",
+  "bugs": {
+    "url": "https://github.com/ExWeiv/wix-secret-helpers/issues",
+    "email": "info@apps.exweiv.com"
+  },
+  "contributors": [
+    {
+      "name": "Enes Bekar",
+      "url": "https://github.com/l0eix"
+    }
+  ],
+  "engines": {
+    "node": ">=18.17.1"
+  },
+  "dependencies": {
+    "node-cache": "^5.1.2",
+    "typescript": "^5.4.3"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.0",
+    "@types/node-cache": "^4.2.5"
+  }
+}
