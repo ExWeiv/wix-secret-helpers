@@ -1,7 +1,5 @@
 /// <reference path="../types/global.d.ts" />
 
-// Type Imports
-import { } from '@exweiv/wix-secret-helpers';
 // API Imports
 import NodeCache from 'node-cache'; //@ts-ignore
 import { secrets } from 'wix-secrets-backend.v2'; //@ts-ignore
