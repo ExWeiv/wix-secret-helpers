@@ -18,7 +18,6 @@ const secretNoCache = await getSecretValue("secretName", true);
 
 ---
 
-<br>
-<img style="width: 120px;" src="https://static.wixstatic.com/shapes/510eca_d281a382d5ad4f10b8d0fe353f5121ff.svg"> <br>
+<img style="width: 120px;" src="https://static.wixstatic.com/shapes/510eca_d281a382d5ad4f10b8d0fe353f5121ff.svg">
 
 [Kolay Gelsin](https://medium.com/the-optimists-daily/kolay-gelsin-a-turkish-expression-we-should-all-know-and-use-83fc1207ae5d) 💜
