@@ -1,6 +1,6 @@
 {
   "name": "@exweiv/wix-secret-helpers",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Some basic helper functions for secrets in Wix, works with wix-secrets-backend.v2 APIs",
   "main": "./lib/index.js",
   "scripts": {
