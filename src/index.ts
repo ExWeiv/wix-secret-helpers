@@ -7,7 +7,7 @@ import * as wixAuth from 'wix-auth';
 // Internal Imports
 import errCodes from './errors';
 
-const secretsCache = new NodeCache({ stdTTL: 300, deleteOnExpire: true });
+const secretsCache = new NodeCache({ stdTTL: 360, deleteOnExpire: true, checkperiod: 30 });
 
 export const getSecretValue = async (secretName: string, disableCache?: boolean): Promise<string> => {
     try {
@@ -23,11 +23,11 @@ export const getSecretValue = async (secretName: string, disableCache?: boolean)
 
         if (cachedSecret) {
             return cachedSecret;
+        } else {
+            const secretValue = await getSecret(secretName);
+            secretsCache.set<string>(secretName, secretValue);
+            return secretValue;
         }
-
-        const secretValue = await getSecret(secretName);
-        secretsCache.set<string>(secretName, secretValue);
-        return secretValue;
     } catch (err) {
         throw Error(`${errCodes.prefix} ${err}`);
     }
