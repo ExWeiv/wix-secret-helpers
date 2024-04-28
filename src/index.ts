@@ -7,7 +7,7 @@ import * as wixAuth from 'wix-auth';
 // Internal Imports
 import errCodes from './errors';
 
-const secretsCache = new NodeCache({ stdTTL: 360, deleteOnExpire: true, checkperiod: 30 });
+const secretsCache = new NodeCache({ stdTTL: 360, deleteOnExpire: true, checkperiod: 30, useClones: false });
 
 export const getSecretValue = async (secretName: string, disableCache?: boolean): Promise<string> => {
     try {
