@@ -1,20 +1,32 @@
 # Secret Helpers for Wix Secrets Manager APIs
 
-This simple library contains (currently only one) helper functions/APIs for `wix-secret-backend.v2` APIs. Examples here:
+This library provides a convenient helper for securely retrieving secrets from Wix Secrets Manager, with built-in memory caching and optional JSON parsing.
 
-**getSecretValue** API is making it possible to get secrets as string and cache them by default so you next calls will be faster.
+## Usage
+
+### Basic Example: Retrieve a Secret as a String
 
 ```js
 import { getSecretValue } from '@exweiv/wix-secret-helpers';
 
-// get secret value with cache enabled:
-const secret = await getSecretValue("secretName");
-
-// disable cache
-const secretNoCache = await getSecretValue("secretName", true);
-
-// handle secret value
+// Returns `string`
+const weatherAPIKey = await getSecretValue("WeatherAPIKey"); 
+const client = new WeatherClient(weatherAPIKey);
 ```
+
+### Advanced Example: Retrieve and Parse a JSON Secret
+
+```js
+import { getSecretValue } from '@exweiv/wix-secret-helpers';
+
+// Returns defined `object`
+const twitterAPIConfig = /** @type {{appKey: string, appSecret: string, accessToken: string, accessSecret: string}} */ (await getSecretValue("TwitterJSON", true));
+const client = new TwitterAPI(twitterAPIConfig);
+```
+
+**Features:**
+- Memory caching (enabled by default, but can be disabled)
+- Optional JSON parsing for secrets stored as JSON
 
 ---
 
