@@ -1,9 +1,14 @@
 {
   "name": "@exweiv/wix-secret-helpers",
-  "version": "2.0.0",
-  "description": "Some basic helper functions for secrets in Wix, works with wix-secrets-backend.v2 APIs",
+  "version": "2.1.0",
+  "description": "Some basic helper functions for secrets in Wix, works with @wix/secrets SDK",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "npm run clean && npm run build:ts && npm run minify",
     "clean": "rm -f ./lib/index.js ./lib/index.js.map ./lib/index.d.ts",
@@ -16,19 +21,20 @@
     "secrets",
     "wix-secrets-backend",
     "exweiv",
-    "wix-secret-helpers"
+    "wix-secret-helpers",
+    "@wix/secrets"
   ],
   "author": {
     "name": "ExWeiv Apps Team",
     "email": "info@apps.exweiv.com"
   },
-  "license": "Apache-2.0",
+  "license": "MIT",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
   "repository": {
-    "url": "git@github.com:ExWeiv/wix-secret-helpers.git",
+    "url": "git+ssh://git@github.com/ExWeiv/wix-secret-helpers.git",
     "type": "git"
   },
   "homepage": "https://github.com/ExWeiv/wix-secret-helpers/",

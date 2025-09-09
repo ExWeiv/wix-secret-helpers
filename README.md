@@ -1,6 +1,6 @@
-# Secret Helpers for Wix Secrets Manager APIs
-
 This library provides a convenient helper for securely retrieving secrets from Wix Secrets Manager, with built-in memory caching and optional JSON parsing.
+
+> Note: this library uses @wix/essentials SDK to grant access to secrets for any client. This is usually fine but in some cases you may not want it, in these cases disable `elevateAccess` in options.
 
 ## Usage
 
@@ -10,7 +10,7 @@ This library provides a convenient helper for securely retrieving secrets from W
 import { getSecretValue } from '@exweiv/wix-secret-helpers';
 
 // Returns `string`
-const weatherAPIKey = await getSecretValue("WeatherAPIKey"); 
+const weatherAPIKey = await getSecretValue({ secretName: "WeatherAPIKey" }); 
 const client = new WeatherClient(weatherAPIKey);
 ```
 
@@ -20,7 +20,7 @@ const client = new WeatherClient(weatherAPIKey);
 import { getSecretValue } from '@exweiv/wix-secret-helpers';
 
 // Returns defined `object`
-const twitterAPIConfig = /** @type {{appKey: string, appSecret: string, accessToken: string, accessSecret: string}} */ (await getSecretValue("TwitterJSON", true));
+const twitterAPIConfig = /** @type {{appKey: string, appSecret: string, accessToken: string, accessSecret: string}} */ (await getSecretValue({ secretName: "TwitterJSON", parseJSON: true }));
 const client = new TwitterAPI(twitterAPIConfig);
 ```
 
