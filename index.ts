@@ -52,7 +52,7 @@ export async function getSecretValue<T = { [key: string]: any }>(options: GetSec
 export async function getSecretValue<T = { [key: string]: any }>({
     secretName,
     elevateAccess = true,
-    cacheEnabled = false,
+    cacheEnabled = true,
     parseJSON = false
 }: GetSecretValueOptions): Promise<string | T> {
     if (!secretName) {
