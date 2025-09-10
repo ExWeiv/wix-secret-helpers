@@ -15,8 +15,8 @@ importers:
         specifier: ^0.1.28
         version: 0.1.28(typescript@5.9.2)
       '@wix/secrets':
-        specifier: ^1.0.60
-        version: 1.0.60
+        specifier: ^1.0.61
+        version: 1.0.61
       neverthrow:
         specifier: ^8.2.0
         version: 8.2.0
@@ -25,7 +25,7 @@ importers:
         version: 5.1.2
     devDependencies:
       '@types/lodash':
-        specifier: ^4.17.0
+        specifier: ^4.17.20
         version: 4.17.20
       '@types/node-cache':
         specifier: ^4.2.5
@@ -34,7 +34,7 @@ importers:
         specifier: ^5.44.0
         version: 5.44.0
       typescript:
-        specifier: ^5.4.3
+        specifier: ^5.9.2
         version: 5.9.2
 
 packages:
@@ -93,8 +93,8 @@ packages:
     resolution: {integrity: sha512-faK2Owokboz53g8ooq2dw3iDJ6/HMTCIa2RvMte5WMTiABy+wA558K+iuyRtlR67Un5q9gEKysSDtqZYbSa0Pg==}
     deprecated: This is a stub types definition. node-cache provides its own type definitions, so you do not need this installed.
 
-  '@wix/auto_sdk_secrets_secrets@1.0.14':
-    resolution: {integrity: sha512-9PlA3gfLBk7WaVw4Uf20XNHpL9wtEzhhsFiO9e1QS3qlcePmh0d01Jb4xpbRANW3BYflhEuQi5NwQ4ER2xccLw==}
+  '@wix/auto_sdk_secrets_secrets@1.0.15':
+    resolution: {integrity: sha512-qiJGx/kanbuZTDk+E8ctTXSlr3S5yND78oB4z3cV/01sDrfBYD8uX864q2jrQ8qaYkDkKgY56qMI56Uh3GAS5w==}
 
   '@wix/error-handler-core@1.19.0':
     resolution: {integrity: sha512-FHgEBgfn9qLTbh9qif3Ql+gpBDsjzGpmlou1Xrre2s/fVkNFUQFvWKZPomuEGR+eVDw8l8ovMbnNfeKlu/g+DA==}
@@ -134,11 +134,11 @@ packages:
   '@wix/sdk-runtime@0.3.62':
     resolution: {integrity: sha512-5imt9mSEaceX365iLGzMJ7jS4qr4lJj+2DZox86Ge8P7V9IeuPYLsQ+0PN9wN6XgMfjNLHt4G6hJUIi3bdglGA==}
 
-  '@wix/sdk-types@1.13.41':
-    resolution: {integrity: sha512-TmxNvMvGSt5Jm6dJ57zV8ZueH2Sx79L/lxg5opC7S+m8Ze+2A4Uv+s2pTXcqPcYDz1WrtcNd8wr9y4XjOXRbBQ==}
+  '@wix/sdk-types@1.14.0':
+    resolution: {integrity: sha512-1ae6emTMiiYr+cpupnmHS05WMU04vP12DlW5cII3pjau3iLhmfo6KjA++ZRSnmOJc0sNYI5iL7sMVrJFy46hPA==}
 
-  '@wix/secrets@1.0.60':
-    resolution: {integrity: sha512-TIHfVvevl85Q23Y/RnS62Urdo1kIaOxgvOetQHzPpDCrh4a+3epK6CpGEmbQWMaMDD4eOHxLTpTte2GAjvmY5g==}
+  '@wix/secrets@1.0.61':
+    resolution: {integrity: sha512-P+wbIzJAqp3jIR4bo9N791qWun807gAj3VvDw2ylb5QB87houSgz+3alHq3NIsV/k1qzBVXaxRL51D/5qrpXcQ==}
 
   acorn@8.15.0:
     resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
@@ -296,10 +296,10 @@ snapshots:
     dependencies:
       node-cache: 5.1.2
 
-  '@wix/auto_sdk_secrets_secrets@1.0.14':
+  '@wix/auto_sdk_secrets_secrets@1.0.15':
     dependencies:
       '@wix/sdk-runtime': 0.3.62
-      '@wix/sdk-types': 1.13.41
+      '@wix/sdk-types': 1.14.0
 
   '@wix/error-handler-core@1.19.0':
     dependencies:
@@ -327,7 +327,7 @@ snapshots:
       '@wix/error-handler': 1.67.0(i18next-icu@2.4.0(intl-messageformat@10.7.16))(i18next@25.5.2(typescript@5.9.2))(intl-messageformat@10.7.16)
       '@wix/monitoring': 0.21.0
       '@wix/sdk-runtime': 0.3.62
-      '@wix/sdk-types': 1.13.41
+      '@wix/sdk-types': 1.14.0
       i18next: 25.5.2(typescript@5.9.2)
       i18next-icu: 2.4.0(intl-messageformat@10.7.16)
       intl-messageformat: 10.7.16
@@ -348,17 +348,17 @@ snapshots:
   '@wix/sdk-runtime@0.3.62':
     dependencies:
       '@wix/sdk-context': 0.0.1
-      '@wix/sdk-types': 1.13.41
+      '@wix/sdk-types': 1.14.0
 
-  '@wix/sdk-types@1.13.41':
+  '@wix/sdk-types@1.14.0':
     dependencies:
       '@wix/error-handler-types': 1.19.0
       '@wix/monitoring-types': 0.12.0
       type-fest: 4.41.0
 
-  '@wix/secrets@1.0.60':
+  '@wix/secrets@1.0.61':
     dependencies:
-      '@wix/auto_sdk_secrets_secrets': 1.0.14
+      '@wix/auto_sdk_secrets_secrets': 1.0.15
 
   acorn@8.15.0: {}
 
