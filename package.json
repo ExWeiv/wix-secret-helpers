@@ -1,6 +1,6 @@
 {
   "name": "@exweiv/wix-secret-helpers",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Some basic helper functions for secrets in Wix, works with @wix/secrets SDK",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -10,10 +10,9 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "npm run clean && npm run build:ts && npm run minify",
-    "clean": "rm -f ./lib/index.js ./lib/index.js.map ./lib/index.d.ts",
-    "build:ts": "tsc",
-    "minify": "terser lib/index.js -o lib/index.js --compress warnings=false --mangle toplevel=true --comments /^!/ --source-map \"filename=index.js.map,url=lib/index.js.map,includeSources\" --in-source-map lib/index.js.map"
+    "build": "npm run clean && npm run build:ts",
+    "clean": "rm -f ./lib/index.js ./lib/index.d.ts",
+    "build:ts": "tsc"
   },
   "keywords": [
     "wix",
@@ -55,7 +54,6 @@
   "devDependencies": {
     "@types/lodash": "^4.17.20",
     "@types/node-cache": "^4.2.5",
-    "terser": "^5.44.0",
     "typescript": "^5.9.2"
   }
 }
