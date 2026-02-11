@@ -1,5 +1,5 @@
 <a href="https://studio.exweiv.com">
-    <img align="right" alt="ExWeiv Studio Logo" title="ExWeiv Studio" height="36" src="https://raw.githubusercontent.com/ExWeiv/public/main/exweiv-studio/images/icon.png">
+    <img align="right" alt="ExWeiv Studio Logo" title="ExWeiv Studio" height="60" src="https://raw.githubusercontent.com/ExWeiv/public/main/exweiv-studio/images/icon.png">
 </a>
 
 # Wix Secret Helpers
