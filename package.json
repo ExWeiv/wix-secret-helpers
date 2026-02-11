@@ -1,6 +1,6 @@
 {
   "name": "@exweiv/wix-secret-helpers",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Some basic helper functions for secrets in Wix, works with @wix/secrets SDK module.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -10,23 +10,17 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "npm run clean && npm run build:ts",
+    "build": "pnpm run clean && pnpm run build:ts",
     "clean": "rm -f ./lib/index.js ./lib/index.d.ts",
     "build:ts": "tsc"
   },
   "keywords": [
-    "wix",
     "velo",
     "secrets",
     "wix-secrets-backend",
-    "exweiv",
-    "wix-secret-helpers",
-    "@wix/secrets"
+    "exweiv-studio",
+    "wix-secret-helpers"
   ],
-  "author": {
-    "name": "ExWeiv Apps Team",
-    "email": "info@apps.exweiv.com"
-  },
   "license": "MIT",
   "publishConfig": {
     "access": "public",
@@ -37,10 +31,6 @@
     "type": "git"
   },
   "homepage": "https://github.com/ExWeiv/wix-secret-helpers/",
-  "bugs": {
-    "url": "https://github.com/ExWeiv/wix-secret-helpers/issues",
-    "email": "info@apps.exweiv.com"
-  },
   "engines": {
     "node": ">=18.17.1"
   },
