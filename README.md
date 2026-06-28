@@ -15,21 +15,28 @@ This library provides a convenient helper for securely retrieving secrets from W
 
 ### Basic Example: Retrieve a Secret as a String
 
-```js
+```ts
 import { getSecretValue } from '@exweiv/wix-secret-helpers';
 
 // Returns `string`
-const weatherAPIKey = await getSecretValue({ secretName: "WeatherAPIKey" }); 
+const weatherAPIKey = await getSecretValue("WeatherAPIKey");
 const client = new WeatherClient(weatherAPIKey);
 ```
 
 ### Advanced Example: Retrieve and Parse a JSON Secret
 
-```js
+```ts
 import { getSecretValue } from '@exweiv/wix-secret-helpers';
 
-// Returns defined `object`
-const twitterAPIConfig = /** @type {{appKey: string, appSecret: string, accessToken: string, accessSecret: string}} */ (await getSecretValue({ secretName: "TwitterJSON", parseJSON: true }));
+// Returns `TwitterConfig` with type safety
+interface TwitterConfig {
+  appKey: string;
+  appSecret: string;
+  accessToken: string;
+  accessSecret: string;
+}
+
+const twitterAPIConfig = await getSecretValue<TwitterConfig>("TwitterJSON", { parseJSON: true });
 const client = new TwitterAPI(twitterAPIConfig);
 ```
 
