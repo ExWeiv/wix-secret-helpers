@@ -74,7 +74,7 @@ export async function getSecretValue<T = Record<string, any>>(
 ): Promise<string | T> {
   if (typeof secretName !== "string" || secretName.trim() === "") {
     const error = new Error(
-      `${PREFIX} secretName must be a non-empty string! Received: ${JSON.stringify(secretName)}`,
+      `${PREFIX} secretName must be a non-empty string!`,
     );
     throw error;
   }
