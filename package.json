@@ -1,6 +1,6 @@
 {
   "name": "@exweiv/wix-secret-helpers",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Some basic helper functions for secrets in Wix, works with @wix/secrets SDK module.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -35,14 +35,13 @@
     "node": ">=18.17.1"
   },
   "dependencies": {
-    "@cacheable/node-cache": "^1.7.0",
-    "@wix/essentials": "^0.1.28",
-    "@wix/secrets": "^1.0.61",
+    "@cacheable/node-cache": "^3.1.1",
+    "@wix/essentials": "^1.0.10",
+    "@wix/secrets": "^1.0.72",
     "neverthrow": "^8.2.0"
   },
   "devDependencies": {
-    "@types/node-cache": "^4.2.5",
-    "terser": "^5.44.0",
-    "typescript": "^5.9.2"
+    "terser": "^5.48.0",
+    "typescript": "^6.0.3"
   }
 }
