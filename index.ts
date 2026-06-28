@@ -76,7 +76,6 @@ export async function getSecretValue<T = Record<string, any>>(
     const error = new Error(
       `${PREFIX} secretName must be a non-empty string! Received: ${JSON.stringify(secretName)}`,
     );
-    console.error(`[Secret Helpers] getSecretValue failed:`, error.message);
     throw error;
   }
 
@@ -92,10 +91,6 @@ export async function getSecretValue<T = Record<string, any>>(
     if (response.isOk()) {
       return response.value;
     }
-    console.error(
-      `[Secret Helpers] getSecretValue("${secretName}") failed:`,
-      response.error.message,
-    );
     throw response.error;
   }
 
@@ -107,10 +102,6 @@ export async function getSecretValue<T = Record<string, any>>(
     if (result.isOk()) {
       return result.value;
     }
-    console.error(
-      `[Secret Helpers] getSecretValue("${secretName}") cache read error:`,
-      result.error.message,
-    );
     throw result.error;
   }
 
@@ -123,10 +114,6 @@ export async function getSecretValue<T = Record<string, any>>(
   if (response.isOk()) {
     return response.value;
   }
-  console.error(
-    `[Secret Helpers] getSecretValue("${secretName}") failed:`,
-    response.error.message,
-  );
   throw response.error;
 }
 
